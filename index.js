@@ -56,7 +56,7 @@ app.post("/", encoder, function (req, res) {
 });
 
 // Start the server
-app.listen(1 000, function () {
+app.listen(1000, function () {
     console.log("Server is running on port 3000");
 });
 
