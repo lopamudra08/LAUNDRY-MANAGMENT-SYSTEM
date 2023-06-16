@@ -1,0 +1,52 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+h2,h4{
+    text-align: center;
+}
+
+input[type=submit]{
+    background-color: rgb(68, 68, 228);
+    width: 112%;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=text] , input[type=password] , input[type=email], input[type=cnfpassword] ,textarea{
+    width: 100%;
+    margin-bottom: 5px 0 22px 0;
+    padding: 15px;
+    display: inline-block;
+}
+.countrycode{
+    width: 8%;
+    padding: 15px;
+}
+.phone{
+    width: 65%;
+    padding: 15px;
+
+}
+div{
+padding: 10px 0;
+}
+hr{
+    margin-bottom: 25px;
+}
+
+
+.Register:hover{
+    opacity: 1;
+}
