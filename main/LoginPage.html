@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LAUNDRY MANAGEMENT SYSTEM</title>
-    <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-    <h2>LAUNDRY MANAGEMENT SYSTEM.</h2><br>
-   <h4>WELCOME</h4>
-   <div class="container">
-   <form id="loginForm" action="/" method="POST">
-        E-mail: 
-        <input type ="text" id="username" placeholder=" " name="username" required><br><br>
-         Password:
-         <input type ="Password" id="password" placeholder=" " name="password" required><br><br>
-         Confirm Password:
-         <input type = "cnfpassword" id="cnfpassword" placeholder=" " name="cnfpassword"required><br><br>
-         <input type="Submit" value="Login">
-         <p>Forgot Password? <a href="">Click here.</a> </p>
-         <p>Don't have any Account? <a href="">Click here.</a> </p>
-    </form>
-</div>
-</body>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="/" method="POST">
+        <h2>Laundry management system</h2>
+
+        <div class="loginform">
+          <label for="username">User name</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="loginform">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <a href="#">Forget Password?</a> <br>
+
+        <input type="submit" class="btn" value="Login" />
+
+        <p>Don't have an Account?</p>
+
+        <a href="#">Click here!</a>
+      </form>
+    </div>
+  </body>
 </html>
