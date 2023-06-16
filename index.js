@@ -31,7 +31,7 @@ connection.connect(function (error) {
 
 //Login Module
 app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/LoginPage.html")
+    res.sendFile(__dirname + "/main/LoginPage.html")
 })
 
 // Handle the POST request to the root URL ("/")
@@ -45,7 +45,7 @@ app.post("/", encoder, function (req, res) {
             res.redirect("/dashboard"); // Use res.redirect instead of req.redirect
             // Set up the /dashboard route
             app.get("/dashboard", function (req, res) {
-                res.sendFile(__dirname + "/dashboard.html");
+                res.sendFile(__dirname + "/main/dashboard.html");
             });
 
         } else {
@@ -62,7 +62,7 @@ app.listen(1000, function () {
 
 //Register Module
 app.get("/Register", function (req, res) {
-    res.sendFile(_dirname + "/RegistrationPage.html")
+    res.sendFile(_dirname + "/main/RegistrationPage.html")
 });
 
 app.post("/", encoder, function (req, res) {
