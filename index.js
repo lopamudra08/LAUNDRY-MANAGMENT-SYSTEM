@@ -36,22 +36,24 @@ app.get("/", function (req, res) {
 
 // Handle the POST request to the root URL ("/")
 app.post("/", encoder, function (req, res) {
-    var username = req.body.username;
+    var email = req.body.email;
     var password = req.body.password;
-    connection.query("SELECT * FROM loginusers WHERE user_name = ? AND password = ? ", [username, password], function (error, results, fields) {
+    connection.query("SELECT * FROM loginusers WHERE email = ? AND password = ? ", [email, password], function (error, results, fields) {
         console.log(results);
         if (results.length > 0) {
             res.redirect("/dashboard"); // Use res.redirect instead of req.redirect
-            // Set up the /dashboard route
-            app.get("/dashboard", function (req, res) {
-                res.sendFile(__dirname + "/main/dashboard.html");
-            });
+            
+            
           } else {
             res.redirect("/");
         }
         res.end();
     });
 });
+
+app.get("/dashboard", function(req,res){
+    res.sendFile(__dirname + "/main/dashboard.html")
+})
 
 
 
@@ -65,13 +67,16 @@ app.get("/register", function (req, res) {
     res.sendFile(__dirname + "/main/RegistrationPage.html")
 });
 
-app.post("/", encoder, function (req, res) {
-    var password = req.body.password;
-    var email = req.body.email;
-    var cnfpassword = req.body.cnfpassword;
+app.post("/register", encoder, function (req, res) {
+
     var full_name = req.body.full_name;
+    var email = req.body.email;
+    var password = req.body.password;
+    var cnfpassword = req.body.cnfpassword;
     var phone = req.body.phone;
-    connection.query("insert into loginusers (email , password , full_name , cnfpassword, phone ) values (email=? , full_name= ? , cnfpassword =? , phone=? , password= ?  ) ", [email, password, cnfpassword, full_name, phone], function (error, results, fields) {
+
+    connection.query("insert  into loginusers (full_name,email,password,cnfpassword,phone) values (full_name = ?, email = ?, password = ?, cnfpassword = ?, phone = ?)", [full_name, email, password, cnfpassword, phone], function (error, results, fields) {
+        console.log(results);
         if (results.length > 0) {
             res.redirect("/register"); // Use res.redirect instead of req.redirect
         } else {
