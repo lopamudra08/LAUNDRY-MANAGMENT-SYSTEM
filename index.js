@@ -38,8 +38,7 @@ app.get("/", function (req, res) {
 app.post("/", encoder, function (req, res) {
     var username = req.body.username;
     var password = req.body.password;
-    var cnfpassword = req.body.cnfpassword;
-    connection.query("SELECT * FROM loginusers WHERE user_name = ? AND password = ? AND cnfpassword = ? ", [username, password, cnfpassword], function (error, results, fields) {
+    connection.query("SELECT * FROM loginusers WHERE user_name = ? AND password = ? ", [username, password], function (error, results, fields) {
         console.log(results);
         if (results.length > 0) {
             res.redirect("/dashboard"); // Use res.redirect instead of req.redirect
@@ -47,22 +46,23 @@ app.post("/", encoder, function (req, res) {
             app.get("/dashboard", function (req, res) {
                 res.sendFile(__dirname + "/main/dashboard.html");
             });
-
-        } else {
+          } else {
             res.redirect("/");
         }
         res.end();
     });
 });
 
+
+
 // Start the server
 app.listen(1000, function () {
-    console.log("Server is running on port 3000");
+    console.log("Server is running on port 1000");
 });
 
 //Register Module
-app.get("/Register", function (req, res) {
-    res.sendFile(_dirname + "/main/RegistrationPage.html")
+app.get("/register", function (req, res) {
+    res.sendFile(__dirname + "/main/RegistrationPage.html")
 });
 
 app.post("/", encoder, function (req, res) {
