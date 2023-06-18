@@ -12,18 +12,18 @@
     <h2>LAUNDRY MANAGEMENT SYSTEM.</h2><br>
     <h4>USER REGISTRATION</h4>
     <div class="container">
-        <form action="/" method="POST">
-            <label for="fullname">Name: </label>
-            <input type="text" placeholder=" " name="fullname" id="fullname" required><br><br>
+        <form action="/register" method="POST">
+            <label for="full_name">Name: </label>
+            <input type="text" placeholder=" " name="full_name" id="full_name" required><br><br>
             <label for="email"> E-mail:</label>
             <input type="email" placeholder=" " name="email" id="email" required><br><br>
             <label for="password"> Password:</label>
             <input type="password" placeholder=" " name="password" id="password" required><br><br>
             <label>Re-Type Password:</label>
-            <input type="password" id="password" name="password"><br><br>
+            <input type="password" id="cnfpassword" name="cnfpassword"><br><br>
             <label for="phone">Phone: </label><br>
             <input type="tel" class="countrycode" id="phone" name="country code" value="+91" size="2" />
-            <input type="tel" class="phone"/><br><br>
+            <input type="tel" class="phone" id="phone" name="phone"/><br><br>
             <label>Gender: </label><br>
             <input type="radio" name="Male" /> Male <br>
             <input type="radio" name="Female" /> Female <br>
