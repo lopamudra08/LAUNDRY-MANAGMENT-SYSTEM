@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LAUNDRY MANAGEMENT SYSTEM</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="/css/registraionpage.css" />
+  </head>
 
-<body>
-    <h2>LAUNDRY MANAGEMENT SYSTEM.</h2><br>
-    <h4>USER REGISTRATION</h4>
+  <body>
     <div class="container">
-        <form action="/register" method="POST">
-            <label for="full_name">Name: </label>
-            <input type="text" placeholder=" " name="full_name" id="full_name" required><br><br>
-            <label for="email"> E-mail:</label>
-            <input type="email" placeholder=" " name="email" id="email" required><br><br>
-            <label for="password"> Password:</label>
-            <input type="password" placeholder=" " name="password" id="password" required><br><br>
-            <label>Re-Type Password:</label>
-            <input type="password" id="cnfpassword" name="cnfpassword"><br><br>
-            <label for="phone">Phone: </label><br>
-            <input type="tel" class="countrycode" id="phone" name="country code" value="+91" size="2" />
-            <input type="tel" class="phone" id="phone" name="phone"/><br><br>
-            <label>Gender: </label><br>
-            <input type="radio" name="Male" /> Male <br>
-            <input type="radio" name="Female" /> Female <br>
-            <input type="radio" name="other" /> other <br><br>
-            <input type="Submit" value="Register"><br><br>
-            <p>Already Have an Account? <a href="/">Click here.</a> </p>
-        </form>
-   </div>
-</body>
-
+      <form id="registrationForm" action="/register" method="POST" onsubmit="return registrationFormValidation()">
+        <h2>LAUNDRY MANAGEMENT SYSTEM.</h2>
+        <br />
+        <h4>USER REGISTRATION</h4>
+        <label for="full_name">Name: </label>
+        <input
+          type="text"
+          placeholder=" "
+          name="full_name"
+          id="full_name"
+          required
+        /><br /><br />
+        <label for="email"> E-mail:</label>
+        <input
+          type="text"
+          placeholder=" "
+          name="email"
+          id="email"
+          required
+        /><br /><br />
+        <label for="password"> Password:</label>
+        <input
+          type="password"
+          placeholder=" "
+          name="password"
+          id="password"
+          required
+        /><br /><br />
+        <label>username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+        /><br /><br />
+        <label for="phone">Phone: </label><br />
+        <input
+          type="countryCode"
+          class="countrycode"
+          id="countryCode"
+          name="country code"
+          value="+91"
+          size="2"
+        />
+        <input type="phone" class="phone" id="phone" name="phone"  /><br /><br />
+        <input type="submit" value="Register"  onclick="alertFunction()" href="/register"/><br /><br />
+        <p>Already Have an Account? <a href="/">Click here.</a></p>
+      </form>
+    </div>
+    <script src="/javascript/sctipt.js"></script>
+  </body>
 </html>

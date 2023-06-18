@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page </title>
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
-
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
@@ -20,17 +18,18 @@
 
         <div class="loginform">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <input type="password" name="password" id="password" required/>
         </div>
 
         <a href="#">Forget Password?</a> <br>
 
-        <input type="submit" class="btn" value="Login" />
+        <input type="submit" id="loginButton" class="btn" value="Login"  onclick="validateForm()" />
 
         <p>Don't have an Account?</p>
 
         <a href="/register">Click here!</a>
       </form>
     </div>
+   <script src="/javascript/loginscript.js"></script>
   </body>
 </html>
