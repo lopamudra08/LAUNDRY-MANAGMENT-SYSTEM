@@ -8,6 +8,7 @@ const app = express();
 app.use(express.static('public'));
 app.use("/css", express.static("css"));
 app.use("/images", express.static("images"));
+app.use("/javascript", express.static("javascript"));
 
 
 //database connection
@@ -54,6 +55,7 @@ app.post("/", encoder, function (req, res) {
   );
 
 });
+
 
 app.get("/dashboard", function (req, res) {
   res.sendFile(__dirname + "/main/dashboard.html");

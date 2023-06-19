@@ -16,10 +16,10 @@ header {
   height: 70px;
   width: 100vw;
   padding: 0 30px;
-  background-color: rgba(0, 0, 0, 0.849);
+  background-color: rgba(20, 51, 230, 0.829);
   position: fixed;
   z-index: 100;
-  box-shadow: 1px 1px 15px rgb(0, 2, 7);
+  box-shadow: 1px 1px 15px rgb(3, 37, 122);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@ header {
 .logo {
   font-size: 27px;
   font-weight: 600;
-  color: rgb(47, 141, 70);
+  color: rgb(253, 253, 253);
 }
 
 .icn {
@@ -48,15 +48,6 @@ header {
   gap: 60px;
 }
 
-.circle {
-  height: 7px;
-  width: 7px;
-  position: absolute;
-  background-color: #fa7bb4;
-  border-radius: 50%;
-  left: 19px;
-  top: 8px;
-}
 
 .dp {
   height: 40px;
@@ -87,15 +78,7 @@ header {
   padding: 40px 30px 30px 30px;
 }
 
-.main::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
-}
-.main::-webkit-scrollbar {
-  width: 5px;
-}
-.main::-webkit-scrollbar-track {
-  background-color: #9e9e9eb2;
-}
+
 
 .box-container {
   display: flex;
@@ -107,21 +90,20 @@ header {
 .nav {
   min-height: 91vh;
   width: 250px;
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: rgba(20, 51, 230, 0.829);
   position: absolute;
   top: 0px;
   left: 00;
-  box-shadow: 1px 1px 10px rgba(11, 11, 14, 0.825);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
   padding: 30px 0 20px 10px;
-  color: rgb(146, 141, 141);
+;
 }
 .navcontainer {
   height: calc(100vh - 70px);
-  width: 250px;
+  width: 350px;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -130,21 +112,19 @@ header {
 .navcontainer::-webkit-scrollbar {
   display: none;
 }
-.navclose {
-  width: 80px;
-}
+
 .nav-option {
   width: 250px;
   height: 60px;
+  color: white;
   display: flex;
   align-items: center;
   padding: 0 30px 0 20px;
   gap: 20px;
-  transition: all 0.1s ease-in-out;
 }
 .nav-option:hover {
-  border-left: 5px solid #a2a2a2;
-  background-color: #dadada;
+  border-left: 5px solid #f57a06ea;
+  background-color: #40ac45;
   cursor: pointer;
 }
 .nav-img {
@@ -158,15 +138,25 @@ header {
   gap: 30px;
 }
 
+a:visited{
+  color: white;
+  text-decoration: none;
+}
+
+a:active{
+  text-decoration: none;
+  color:white ;
+}
+
 .option1 {
-  border-left: 5px solid #010058af;
-  background-color: var(--Border-color);
+  border-left: 5px solid #f57a06ea;
+  background-color: #40ac45;
   color: white;
   cursor: pointer;
 }
 .option1:hover {
-  border-left: 5px solid #010058af;
-  background-color: var(--Border-color);
+  border-left: 5px solid #f57a06ea;
+  background-color: #40ac45;
 }
 .box {
   height: 130px;

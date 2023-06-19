@@ -7,7 +7,7 @@
 
 body{
     min-height: 1000px;
-    background: #a27be7;
+    background: rgb(20, 51, 230, 0.829);
     display: flex;
 }
 
@@ -30,7 +30,7 @@ form{
 h2{
     text-align: center;
     text-transform: uppercase;
-    color: black;
+    color: rgb(228, 70, 8);
     margin: 0;
 }
 h4{
