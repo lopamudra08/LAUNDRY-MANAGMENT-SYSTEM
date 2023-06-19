@@ -29,6 +29,15 @@ connection.connect(function (error) {
     console.log("database connected");
   }
 });
+app.get("/request",function(req,res){
+  res.sendFile(__dirname + "/main/RequestForm.html");
+})
+app.post("/request",encoder, function(req,res){
+
+  connection.query(
+
+  )
+})
 
 //Login Module
 app.get("/", function (req, res) {

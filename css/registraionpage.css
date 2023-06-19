@@ -6,9 +6,9 @@
  }
  
  body{
-    min-height: 1000px;
-    background: rgb(20, 51, 230, 0.829);
-    display: flex;
+     min-height: 1000px;
+     background: #ece9f1;
+     display: flex;
  }
  
  .container{

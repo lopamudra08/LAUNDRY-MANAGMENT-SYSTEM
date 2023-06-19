@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/requestform_style.css"/>
+    <title>REQUEST FORM</title>
+</head>
+<body>
+    <h1>Request Form</h1>
+    <form action="/main/RequestForm.html" methos="POST">
+     
+        <label for="date">Submission_Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="date">Collection_Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+
+        <label for="service_type">Service Type:</label>
+        <select id="service_type" name="service_type" required><br>
+            <option value="washing">Washing</option>
+            <option value="ironing">Ironing</option>
+            <option value="deying">Deying</option>
+            <option value="dry_cleaning">Dry Cleaning</option>
+        </select><br><br>
+
+                
+        <label for="cloth_type">Cloth Type:</label>
+        <select id="cloth_type" name="cloth_type" required><br>
+            <option value="topwear">Top Wear(Tshirt, Top ,Shirt)</option>
+            <option value="bottomwear">Bottom Wear(Lower , Jeans , Jeggins)</option>
+            <option value="woolean">Woolean Cloth</option>
+            <option value="others">Others</option>
+        </select>   
+
+        <label for="message">Message (if any) :</label>
+        <textarea id="message" name="message" rows="4" ></textarea><br>
+
+        <label for="contactperson">Contact Person :</label>
+        <input type="tel" class="countrycode" id="phone" name="country code" value="+91" size="2" />
+        <input type="tel" class="phone" id="phone" name="phone"/>
+        <br><br>
+
+            <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
