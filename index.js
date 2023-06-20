@@ -1,7 +1,6 @@
 const mysqlConnection = require("mysql");
 const express = require("express");
 const bodyparser = require("body-parser");
-const validator = require("validator");
 const encoder = bodyparser.urlencoded();
 const app = express();
 
@@ -29,20 +28,33 @@ connection.connect(function (error) {
     console.log("database connected");
   }
 });
+
 app.get("/request",function(req,res){
   res.sendFile(__dirname + "/main/RequestForm.html");
-})
-app.post("/request",encoder, function(req,res){
-
-  connection.query(
-
-  )
 })
 
 //Login Module
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/main/LoginPage.html");
+});
 
+app.get("/dashboard", function (req, res) {
+  res.sendFile(__dirname + "/main/dashboard.html");
+});
+
+//Register Module
+app.get("/register", function (req, res) {
+  res.sendFile(__dirname + "/main/RegistrationPage.html");
+});
+
+//success massage
+app.get("/success", function (req, res) {
+  res.sendFile(__dirname + "/main/SuccessPage.html");
+});
+
+// Start the server
+app.listen(3000, function () {
+  console.log("Server is running on port 3000");
 });
 
 // Handle the POST request to the root URL ("/")
@@ -55,7 +67,7 @@ app.post("/", encoder, function (req, res) {
     function (error, results, fields) {
       console.log(results);
       if (results.length > 0) {
-        res.redirect("/dashboard"); // Use res.redirect instead of req.redirect
+        res.redirect("/dashboard");
       } else {
         res.redirect("/");
       }
@@ -63,21 +75,6 @@ app.post("/", encoder, function (req, res) {
     }
   );
 
-});
-
-
-app.get("/dashboard", function (req, res) {
-  res.sendFile(__dirname + "/main/dashboard.html");
-});
-
-// Start the server
-app.listen(1000, function () {
-  console.log("Server is running on port 1000");
-});
-
-//Register Module
-app.get("/register", function (req, res) {
-  res.sendFile(__dirname + "/main/RegistrationPage.html");
 });
 
 app.post("/register", encoder, function (req, res) {
@@ -92,11 +89,15 @@ app.post("/register", encoder, function (req, res) {
     function (error, results, fields) {
       console.log(results);
       if (results.affectedRows > 0) {
-        res.redirect();
+        res.redirect('/success');
       } else {
-        res.redirect("/");
+        res.redirect("/register");
       }
       res.end();
     }
   );
+});
+
+app.post('/success', encoder, function (req, res) {
+  res.redirect('/');
 });

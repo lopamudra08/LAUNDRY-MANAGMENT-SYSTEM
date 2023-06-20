@@ -5,7 +5,6 @@ function validateForm() {
   var username = document.getElementById("username").value;
   var phone = document.getElementById("phone").value;
 
-
   // Validate full name
   if (fullName === "") {
     document.getElementById("full_name_error").innerText =
@@ -19,6 +18,10 @@ function validateForm() {
   if (email === "") {
     document.getElementById("email_error").innerText =
       "Please enter your email";
+    return false;
+  } else if (!validateEmail(email)) {
+    document.getElementById("email_error").innerText =
+      "Please enter a valid email address";
     return false;
   } else {
     document.getElementById("email_error").innerText = "";
@@ -55,14 +58,29 @@ function validateForm() {
     document.getElementById("phone_error").innerText = "";
   }
 
-  if (fullName !== '' && email !== '' && password !== '' && username !== '' && phone !== '') {
+  if (
+    fullName !== "" &&
+    email !== "" &&
+    password !== "" &&
+    username !== "" &&
+    phone !== ""
+  ) {
     // Form is valid, show success message
-    var successMessage = document.createElement('p');
-    successMessage.textContent = 'Registration successful!';
-    successMessage.style.color = 'red';
+    var successMessage = document.createElement("p");
+    successMessage.textContent = "Registration successful!";
+    successMessage.style.color = "red";
     document.body.appendChild(successMessage);
-    return false;
+    return true;
   }
 
   return true; // Form is valid, allow submission
+  function validateEmail(email) {
+    // Regular expression pattern for email validation
+    var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    // Test the email against the pattern
+    return pattern.test(email);
+  }
+  
 }
+

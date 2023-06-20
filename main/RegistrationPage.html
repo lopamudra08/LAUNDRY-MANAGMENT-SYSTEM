@@ -9,7 +9,7 @@
 
   <body>
     <div class="container">
-      <form id="registrationForm" action="/register" method="POST" onsubmit="return validateForm()" >
+      <form id="registrationForm" action="/register" method="POST" >
         <h2>LAUNDRY MANAGEMENT SYSTEM.</h2>
         <br />
         <h4>USER REGISTRATION</h4>
@@ -62,7 +62,7 @@
         <div >
           <p id="success_container" class="success_container"></p>
         </div>
-        <input type="submit" value="Register"  onclick="validateForm()" href="/register"/><br /><br />
+        <input type="submit" value="Register"  onclick="validateForm()"> <br> <br>
         <p>Already Have an Account? <a href="/">Click here.</a></p>
       </form>
     </div>
