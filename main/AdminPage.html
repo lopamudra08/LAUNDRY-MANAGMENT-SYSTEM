@@ -1,154 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/dashboard_style.css"/>
+    <link rel="stylesheet" href="/css/dashboard_style.css" />
     <title> Dashboard </title>
-    <body>
-   
-        <!-- for header part -->
-        <header>
-     
-            <div class="logosec">
-                <div class="logo">LAUNDRY MANAGEMENT SYSTEM</div>  
-            </div>  
-            <div class="message">
-                <div class="circle"></div>
-                <div class="dp">
-                  <img src="/images/profile-user.png"
-                        class="dpicn"
-                        alt="dp">
-                  </div>
+
+<body>
+
+    <!-- for header part -->
+    <header>
+
+        <div class="logosec">
+            <div class="logo">LAUNDRY MANAGEMENT SYSTEM</div>
+        </div>
+        <div class="message">
+            <div class="circle"></div>
+            <div class="dp">
+                <img src="/images/profile-user.png" class="dpicn" alt="dp">
             </div>
-        </header>
-        
-        <div class="main-container">
-            <div class="navcontainer">
-                <nav class="nav">
-                    <div class="nav-upper-options">
-                        <div class="nav-option option1">
-                            <img src= "/images/dashboard.png"
-                                class="nav-img"
-                                alt="dashboard">
-                            <h3> Admin Dashboard</h3>
-                        </div>
-     
-                        <div class="option2 nav-option">
-                            <a href="/request">                               
-                            <img src= "/images/request.png"
-                                class="nav-img"
-                                alt="Registered User"></a>
-                                <span><h3>Registered User</h3></span>
-                        </div>
-                        
+        </div>
+    </header>
 
-                        <div class="nav-option option3">
-                            <img src="/images/check-list.png"
-                                class="nav-img"
-                                alt="Laundry Request">
-                            <h3>Laundry Request </h3>
-                        </div>
-
-                    
-
-                        <div class="nav-option option3">
-                            <img src="/images/check-list.png"
-                                class="nav-img"
-                                alt="Manage Laundry Price">
-                            <h3> Manage Laundry Price</h3>
-                        </div>
-
-                     
-
-                        <div class="nav-option logout">
-                            <a href="/">
-                            <img src= "/images/logout.png"
-                                class="nav-img"
-                                alt="logout"></a>
-                                <span><h3>Logout</h3></span>
-                            
-                        </div>
-     
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <img src="/images/dashboard.png" class="nav-img" alt="dashboard">
+                        <h3> Admin Dashboard</h3>
                     </div>
-                </nav>
+
+                    <div class="option2 nav-option">
+                        <a href="/request">
+                            <img src="/images/request.png" class="nav-img" alt="Registered User"></a>
+                        <span>
+                            <h3>Registered User</h3>
+                        </span>
+                    </div>
+
+
+                    <div class="nav-option option3">
+                        <a href="/">
+                            <img src="/images/check-list.png" class="nav-img" alt="Laundry Request"></a>
+                        <span>
+                            <h3>Laundry Request</h3>
+                        </span>
+                    </div>
+
+
+
+                    <div class="nav-option option3">
+                        <a href="/">
+                            <img src="/images/check-list.png" class="nav-img" alt="Manage Laundry Price"></a>
+                        <span>
+                            <h3>Manage Laundry Price</h3>
+                        </span>
+                    </div>
+
+
+
+                    <div class="nav-option logout">
+                        <a href="/user_login">
+                            <img src="/images/logout.png" class="nav-img" alt="logout"></a>
+                        <span>
+                            <h3>Logout</h3>
+                        </span>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+
+            <div class="box-container">
+
+                <div class="box box1">
+                    <div class="text">
+                        <h2 class="topic-heading"></h2>
+                        <h2 class="topic">New Request!</h2>
+                    </div>
+
+                    <img src="/images/demand.png" alt="New Request">
+                </div>
+
+                <div class="box box2">
+                    <div class="text">
+                        <h2 class="topic-heading"></h2>
+                        <h2 class="topic">Accept!</h2>
+                    </div>
+
+                    <img src="/images/package.png" alt="accept">
+                </div>
+
+                <div class="box box3">
+                    <div class="text">
+                        <h2 class="topic-heading"></h2>
+                        <h2 class="topic">Inprocess!</h2>
+                    </div>
+
+                    <img src="/images/incomplete.png" alt="inprocess">
+                </div>
+
+                <div class="box box4">
+                    <div class="text">
+                        <h2 class="topic-heading"></h2>
+                        <h2 class="topic">Finish!</h2>
+                    </div>
+                    <img src="/images/business.png" alt="finished">
+                </div>
+
+
+                <div class="box box5">
+                    <div class="text">
+                        <h2 class="topic-heading"></h2>
+                        <h2 class="topic">Delivered!</h2>
+                    </div>
+
+                    <img src="/images/delivered.png" alt="delivered">
+                </div>
             </div>
             <div class="main">
-     
                 <div class="box-container">
-     
-                    <div class="box box1">
-                        <div class="text">
-                            <h2 class="topic-heading"></h2>
-                            <h2 class="topic">New Request!</h2>
-                        </div>
-     
-                        <img src= "/images/demand.png"
-                            alt="New Request">
-                    </div>
-     
-                    <div class="box box2">
-                        <div class="text">
-                            <h2 class="topic-heading"></h2>
-                            <h2 class="topic">Accept!</h2>
-                        </div>
-     
-                        <img src= "/images/package.png"
-                             alt="accept">
-                    </div>
-     
-                    <div class="box box3">
-                        <div class="text">
-                            <h2 class="topic-heading"></h2>
-                            <h2 class="topic">Inprocess!</h2>
-                        </div>
-     
-                        <img src=   "/images/incomplete.png"
-                            alt="inprocess">
-                    </div>
-     
-                    <div class="box box4">
-                        <div class="text">
-                            <h2 class="topic-heading"></h2>
-                            <h2 class="topic">Finish!</h2>
-                        </div>
-                        <img src= "/images/business.png" alt="finished">
-                    </div>
-
-                    
-                        <div class="box box5">
-                            <div class="text">
-                                <h2 class="topic-heading"></h2>
-                                <h2 class="topic">Delivered!</h2>
-                            </div>    
-     
-                        <img src= "/images/delivered.png" alt="delivered">
-                    </div>
+                    <table>
+                        <thead><b> Laundry Price (Per Unit)</b></thead>
+                        <tr>
+                            <th>Top Wear Laundry Price</th>
+                            <th>Bottom Wear Laundry Price</th>
+                            <th>Woolean Cloth Laundry Price</th>
+                            <th>Other Price</th>
+                        </tr>
+                        <td>12</td>
+                        <td>22</td>
+                        <td>20</td>
+                        <td>Other Price depend upon cloth variety(other than above three category)</td>
+                        </tr>
+                    </table>
                 </div>
-    <div class="main">
-        <div class="box-container">
-            <table>
-                <thead><b> Laundry Price (Per Unit)</b></thead>
-                <tr>
-                    <th>Top Wear Laundry Price</th>
-                    <th>Bottom Wear Laundry Price</th>
-                    <th>Woolean Cloth Laundry Price</th> 
-                    <th>Other Price</th>   
-                </tr>
-                    <td>12</td>
-                    <td>22</td>
-                    <td>20</td>  
-                    <td>Other Price depend upon cloth variety(other than above three category)</td>   
-                </tr>
-           </table>
+            </div>
+
+
+
         </div>
     </div>
 
+    <script src="/javascript/sctipt.js"></script>
+</body>
 
-              
-            </div>
-        </div>
-     
-        <script src="/javascript/sctipt.js"></script>
-    </body>
-    </html>
+</html>
