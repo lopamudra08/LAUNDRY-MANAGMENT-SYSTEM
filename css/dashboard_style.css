@@ -143,8 +143,13 @@ header {
   transition: all 0.1s ease-in-out;
 }
 .nav-option:hover {
+<<<<<<< Updated upstream
   border-left: 5px solid #a2a2a2;
   background-color: #dadada;
+=======
+  border-left: 5px solid #2f34c4ea;
+  background-color: #2429bf;
+>>>>>>> Stashed changes
   cursor: pointer;
 }
 .nav-img {
@@ -159,14 +164,24 @@ header {
 }
 
 .option1 {
+<<<<<<< Updated upstream
   border-left: 5px solid #010058af;
   background-color: var(--Border-color);
+=======
+  border-left: 5px solid  #1c17a7;
+  background-color:  #1c17a7;
+>>>>>>> Stashed changes
   color: white;
   cursor: pointer;
 }
 .option1:hover {
+<<<<<<< Updated upstream
   border-left: 5px solid #010058af;
   background-color: var(--Border-color);
+=======
+  border-left: 5px solid #1c17a7;
+  background-color: #1c17a7;
+>>>>>>> Stashed changes
 }
 .box {
   height: 130px;
@@ -185,16 +200,19 @@ header {
 }
 
 .box:nth-child(1) {
-  background-color: #f57a06ea;
+  background-color:  #1c17a7;
 }
 .box:nth-child(2) {
-  background-color: #3d74eb;
+  background-color:  #1c17a7;
 }
 .box:nth-child(3) {
-  background-color:  #dd5025;
+  background-color:   #1c17a7;
 }
 .box:nth-child(4) {
-  background-color: #40ac45;
+  background-color:  #1c17a7;
+}
+.box:nth-child(5) {
+  background-color:  #1c17a7;
 }
 
 .box img {
